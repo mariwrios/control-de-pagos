@@ -78,3 +78,38 @@
   color: var(--text-dark);
   border: 2px solid var(--gray-light);
 }
+
+
+.pagos-list_container ul{
+display: flex;
+padding: inherit;
+margin: auto;
+flex-direction: column;
+align-items: center;
+width: 80vw;
+position: relative;
+    top: 5vh;
+}
+
+.pagos-list_container ul li{
+  display: flex;
+    padding: inherit;
+    margin-bottom: 3vh;
+    height: 100px;
+    border-radius: 15px;
+    background: white;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+.pagos-list_info-pago div{
+display: flex;
+}
+.pagos-list_info-pago div h3{
+  margin: 0;
+  }
+.pagos-list_info-pago h4{
+    margin: 0;
+}
+  
