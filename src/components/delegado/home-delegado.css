@@ -48,13 +48,13 @@ justify-content: space-between;
   margin: none;
 }
 
-.delegado-home_hero--buscador-container{
+.delegado-home__buscador--container{
   display: flex;
   align-items: center;
   position: relative;
 }
 
-.delegado-home_hero--buscador-container img {
+.delegado-home__buscador--container img {
   margin-bottom: 3vh;
   position: absolute;
   right: 4vw;
