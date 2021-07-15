@@ -7,10 +7,10 @@
   background: rgb(0,112,186);
   background: linear-gradient(121deg, rgba(0,112,186,1) 0%, rgba(21,70,160,1) 100%);
   color: white;
-  border-bottom-right-radius: 40px;
-  padding-top: 3vh;
+  position: relative;
+  padding: 2vh 0;
   box-sizing: border-box;
-  box-shadow: 0px 16px 36px -16px rgba(21, 70, 160, 0.5);
+ 
 }
 
 .profile_header {
@@ -31,9 +31,10 @@
 }
 
 .profilePhoto{
-  width:25vw;
+  width:28vw;
   height:auto;
   border-radius:50vw;
+  margin-bottom: 2vh;
   border: 2px solid white
 }
 
@@ -46,8 +47,9 @@
 }
 
 .profile_header--info h3{
- font-size: 20px;
- color:var(--blue-shine)
+  font-size: 20px;
+  margin: inherit;
+  color: var(--blue-shine);
 }
 
 .profile_header--info span {
@@ -60,4 +62,19 @@
 
 .profile_header--info span h4 {
   margin: 0 2vw
+}
+
+.profile_header--info button {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 5vh;
+  width: 40vw;
+  border-radius: 2vw;
+  background: var(--green);
+  position: absolute;
+  font-size: 16px;
+  bottom: -2.5vh;
+  color: var(--text-dark);
+  border: 2px solid var(--gray-light);
 }

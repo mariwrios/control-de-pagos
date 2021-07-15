@@ -10,7 +10,7 @@ const ProfileHeader = () => {
     </div>
     <img className='profilePhoto' src='./assets/delegado/foto-de-prueba.jpg'/>
     <div className='profile_header--info'>
-      <h3>Maria Jaramillo</h3>
+      <h3>Maria Milagros Jaramillo</h3>
       <span>
         <img src='./assets/delegado/icon-direction-white.svg'/>
         <h4>Tulipan Calle# 32</h4>
@@ -23,6 +23,10 @@ const ProfileHeader = () => {
         <img src='./assets/delegado/telefono.svg'/>
         <h4>0424-2345675</h4>
       </span>
+      <button >
+        <img src='./assets/delegado/icon-more-dark.svg'/>
+        Nuevo Registro
+        </button>
     </div>
     </div>
   )
