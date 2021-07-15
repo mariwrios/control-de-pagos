@@ -16,6 +16,7 @@ export const ProfilePagosList = () => {
               </div>
               <button>
                 Factura
+                <img src='./assets/delegado/icon-descargar.svg'/>
               </button>
              
             </li>
