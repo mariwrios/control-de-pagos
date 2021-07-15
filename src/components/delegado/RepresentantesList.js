@@ -46,9 +46,9 @@ export const RepresentantesList = () => {
         <ul>
           {
             list.map(({name, casa, solvencia})=>(
-              <li style={(solvencia=='debe') ? debe : Nodebe}>
+              <li className='representante-list_card' style={(solvencia=='debe') ? debe : Nodebe}>
                 <h3>{name}</h3>
-                <span style={{display:'flex', alignItems:'center', width:'100px', justifyContent:'space-between'}}>
+                <span style={{display:'flex', alignItems:'center', width:'100px', justifyContent:'space-between', marginRight:'5vw'}}>
                   <span style={{display:'flex', alignItems:'center', width:'45px', justifyContent:'space-between'}}>
                   <img src={(solvencia=='debe') ? './assets/delegado/icon-house-debe.svg' : './assets/delegado/icon-house-nodebe.svg'}/>
                 <h3>{casa}</h3>

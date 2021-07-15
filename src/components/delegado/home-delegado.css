@@ -78,10 +78,30 @@ justify-content: space-between;
 
 
 
-.representante-list_container ul li{
+.representante-list_card{
   width: 80vw;
+  height: 9vh;
+  border: none;
+  border-radius: 15px;
+  margin-bottom: 3vh;
+  outline: none;
+  padding-left: 3vw;
+  box-sizing: border-box;
+  background: white;
+}
+
+.representante-list_container ul li{
   display: flex;
   justify-content: space-between;
+  width: 80vw;
+  height: 9vh;
+  border: none;
+  border-radius: 15px;
+  margin-bottom: 3vh;
+  outline: none;
+  padding-left: 3vw;
+  box-sizing: border-box;
+  background: white;
  
 }
 
