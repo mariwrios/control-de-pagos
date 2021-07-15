@@ -30,6 +30,7 @@
   margin-bottom: 3vh;
   outline: none;
   font-size: 18px;
+  min-height: 66px;
   padding-left: 3vw;
   box-sizing: border-box;
   color: #5c6971;
@@ -45,6 +46,7 @@ input::placeholder {
 .login__container button {
   height: 9.5vh;
   width: 80vw;
+  min-height: 70px;
   border-radius: 15px;
   color: var(--gray-light);
   font-size: 18px;
