@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #EFF0F3;
+  
 }
 
 code {
@@ -15,7 +16,8 @@ code {
 
 :root{
   --blue-light: #01A0E4;
-  --gray-light: #eff0f3
+  --blue-shine: #50D4FE;
+  --gray-light: #eff0f3;
 
 }
 
@@ -23,3 +25,4 @@ code {
   display: flex;
   justify-content: center;
 }
+

@@ -7,7 +7,7 @@ export const Login = () => {
     email: '',
     password:''
   }
-  const [formValues, handleInputChange, reset] = useForm(initialForm)
+  const [formValues, handleInputChange] = useForm(initialForm)
 
   const {email, password} = formValues;
 
@@ -18,13 +18,24 @@ export const Login = () => {
 
   return (
     <div className='login__container'>
-      <img src='./assets/auth/logo.svg'/>
+      <img src='./assets/auth/logo.svg' alt='Logo de ASOVECIB'/>
 
       <form onSubmit={hadleInputSubmit}>
         
-        <input placeholder='Escriba su correo' name='email' value={email} onChange={handleInputChange} type='email' autoComplete='off'/>
+        <input 
+        placeholder='Escriba su correo' 
+        name='email' 
+        value={email} 
+        onChange={handleInputChange} 
+        type='email' 
+        autoComplete='off'/>
         
-        <input placeholder='Escriba su contraseña' name='password' value={password} onChange={handleInputChange} type='password' autoComplete='off'/>
+        <input 
+        placeholder='Escriba su contraseña' 
+        name='password' value={password} 
+        onChange={handleInputChange} 
+        type='password' 
+        autoComplete='off'/>
         <button>Iniciar Sesión</button>
       </form>
 

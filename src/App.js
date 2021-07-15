@@ -1,9 +1,10 @@
 import {Login} from './components/auth/Login'
+import { HomeDelegado } from './components/delegado/HomeDelegado';
 
 function App() {
   return (
     <div >
-      <Login/>
+      <HomeDelegado/>
     </div>
   );
 }
