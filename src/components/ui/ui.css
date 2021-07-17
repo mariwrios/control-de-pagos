@@ -1,5 +1,8 @@
 .navbar_container{
   position: fixed;
   bottom: 0;
-  background-color: blue;
+  width: 100vw;
+  background-color: #243656;
+  border-top-left-radius: 32px;
+  height: 10vh;
 }
