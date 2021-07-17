@@ -9,16 +9,25 @@ export const Navbar = () => {
        <nav>
           <ul>
             <li>
-              <Link to="/inicio">Inicio</Link>
+              <Link to="/inicio">
+                <img src='./assets/ui/icon-inicio.svg'/>
+                Inicio
+                </Link>
             </li>
             <li>
-              <Link to="/pagos">Pagos</Link>
+              <Link to="/pagos">
+              <img src='./assets/ui/icon-pagos.svg'/>
+                Pagos</Link>
             </li>
             <li>
-              <Link to="/perfil">Perfil</Link>
+              <Link to="/perfil">
+              <img src='./assets/ui/icon-perfil.svg'/>
+                Perfil</Link>
             </li>
             <li>
-              <Link to="/ajustes">Ajustes</Link>
+              <Link to="/ajustes">
+              <img src='./assets/ui/icon-ajustes.svg'/>
+                Ajustes</Link>
             </li>
           </ul>
         </nav>
