@@ -1,11 +1,15 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { login } from '../../actions/authAction'
 import { useForm } from '../../hooks/useForm'
 import './login.css'
 
 export const Login = () => {
+const dispatch = useDispatch()
+
   const initialForm ={
-    email: '',
-    password:''
+    email: 'mari@gmail.com',
+    password:'123456'
   }
   const [formValues, handleInputChange] = useForm(initialForm)
 
@@ -13,8 +17,10 @@ export const Login = () => {
 
   const hadleInputSubmit = (e) => {
     e.preventDefault();
-    console.log(formValues)
+    dispatch(login())
+   console.log(email,password)
   }
+
 
   return (
     <div className='login__container'>

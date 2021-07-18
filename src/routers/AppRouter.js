@@ -5,14 +5,14 @@ import {
     Redirect
   } from 'react-router-dom';
   
-import { useDispatch, useSelector } from 'react-redux';
-
 import { Login } from '../components/auth/Login';
 import Dashboard from './Dashboard';
 import { PublicRoutes } from './PublicRoutes';
 import { PrivateRoutes } from './PrivatesRoutes';
+import { useSelector } from 'react-redux';
 
 export const AppRouter = () => {
+    const {login} = useSelector(state => state.auth)
 
     return (
         <Router>
@@ -23,14 +23,14 @@ export const AppRouter = () => {
                         exact 
                         path="/login" 
                         component={Login}
-                        isAuthenticated={ true}
+                        isAuthenticated={login}
                     />
 
                     <PrivateRoutes 
                         exact 
                         path="/" 
                         component={ Dashboard } 
-                        isAuthenticated={ true }
+                        isAuthenticated={login}
                     />
 
                     <Redirect to="/" />   

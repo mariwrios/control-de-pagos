@@ -10,13 +10,13 @@ export const ProfilePagosList = () => {
               <div className='pagos-list_info-pago'>
                 <h4>Referencia: <span>{ref}</span></h4>
                 <div>
-                  <img src='./assets/delegado/icon-calendar.svg'/>
+                  <img src='./assets/delegado/icon-calendar.svg' alt='icono de calendario'/>
                   <h3>{fecha}</h3>
                 </div>
               </div>
               <button>
                 Factura
-                <img src='./assets/delegado/icon-descargar.svg'/>
+                <img src='./assets/delegado/icon-descargar.svg' alt='icono de descargar'/>
               </button>
              
             </li>
