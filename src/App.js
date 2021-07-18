@@ -1,14 +1,13 @@
-import {Login} from './components/auth/Login'
-import { HomeDelegado } from './components/delegado/home/HomeDelegado';
-import { ProfileDelegado } from './components/delegado/profile/ProfileDelegado';
+import React from 'react';
+import { Provider } from 'react-redux';
 import Dashboard from './routers/Dashboard';
+import { store } from './store/store';
 
-function App() {
+export const App =() => {
   return (
-    <div >
+    <Provider store={store}>
       <Dashboard/>
-    </div>
+    </Provider>
   );
 }
 
-export default App;
