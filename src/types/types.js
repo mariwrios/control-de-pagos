@@ -5,4 +5,14 @@ export const types = {
   authStartRegister: '[auth] Start Register',
   authStartStartTokenRenew: '[auth] Start token renew',
   authLogout: '[auth] Logout',
+
+
+
+  payAddNew: '[pay] New note',
+  payActive: '[pay] Set active note',
+  payLoad: '[pay] Load pay',
+  payUpdated: '[pay] Updated note',
+  payFileUrl: '[pay] Updated image url',
+  payDelete: '[pay] Delete note',
+  payLogoutCleaning: '[pay] Logout Cleaning',
 }

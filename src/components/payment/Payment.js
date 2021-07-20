@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const PagosDelegado = () => {
+export const Payment = () => {
   return (
     <div>
       Aqui van los pagos que aun no diseño

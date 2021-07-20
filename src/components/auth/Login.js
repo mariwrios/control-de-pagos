@@ -17,8 +17,8 @@ const dispatch = useDispatch()
 
   const hadleInputSubmit = (e) => {
     e.preventDefault();
-    dispatch(login())
-   console.log(email,password)
+    dispatch(login(email, password))
+
   }
 
 

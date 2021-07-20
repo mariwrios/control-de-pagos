@@ -1,12 +1,12 @@
 import React from 'react'
-import { HeaderHomeDelegado } from './HeaderHomeDelegado'
-import './home-delegado.css'
+import { HeaderHome } from './HeaderHome'
+import './home.css'
 import { RepresentantesList } from './RepresentantesList'
 
-export const HomeDelegado = () => {
+export const Home = () => {
   return (
     <div className='delegado-home_container'>
-   <HeaderHomeDelegado/>
+   <HeaderHome/>  
    <RepresentantesList/>
       
     </div>

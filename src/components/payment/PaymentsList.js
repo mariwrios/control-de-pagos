@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const ProfilePagosList = () => {
+export const PaymentsList = () => {
   return (
     <div className='pagos-list_container'>
       <ul>

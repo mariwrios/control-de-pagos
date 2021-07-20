@@ -1,6 +1,12 @@
 import React from 'react'
 
-export const HeaderHomeDelegado = () => {
+export const HeaderHome = () => {
+
+  const handleNewPersonRegister = ()=>{
+    console.log('Quiero registrar a una nueva persona')
+  }
+
+
   return (
     <div className='delegado-home_hero'>
     <div className='delegado-home_hero--header'>
@@ -14,8 +20,12 @@ export const HeaderHomeDelegado = () => {
     <div className='delegado-home__buscador--container'>
     <input/>
     <img src='./assets/delegado/icon-lupa.svg' alt='icono de buscador'/>
+   
     </div>
-  
+    <button onClick={handleNewPersonRegister} >
+        <img src='./assets/delegado/icon-more-dark.svg' alt='icono de nuevo registro'/>
+        Nuevo Registro
+        </button>
   </div>
   )
 }

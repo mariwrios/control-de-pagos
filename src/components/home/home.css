@@ -7,7 +7,8 @@
   background: rgb(0,112,186);
   background: linear-gradient(121deg, rgba(0,112,186,1) 0%, rgba(21,70,160,1) 100%);
   color: white;
-  padding-top: 0 3vh;
+  position: relative;
+  padding: 2vh 0;
   box-sizing: border-box;
   box-shadow: 0px 16px 36px -16px rgba(21, 70, 160, 0.5);
 }
@@ -47,15 +48,16 @@ justify-content: space-between;
 
 .delegado-home__buscador--container{
   display: flex;
+  justify-content: center;
   align-items: center;
   position: relative;
 }
 
-.delegado-home__buscador--container img {
-  margin-bottom: 3vh;
+.delegado-home__buscador--container > img {
   position: absolute;
   right: 4vw;
-  width: 5vw;
+  top: 2.5vh;
+ 
 }
 
 .delegado-home_hero input {
@@ -63,7 +65,7 @@ justify-content: space-between;
   height: 7vh;
   border: none;
   border-radius: 15px;
-  margin-bottom: 3vh;
+  margin-bottom: 5.5vh;
   outline: none;
   font-size: 18px;
   min-height: 50px;
@@ -89,6 +91,9 @@ justify-content: space-between;
   background: white;
 }
 
+.representante-list_container{
+  padding: 2vh 0 4vh 0;
+}
 .representante-list_container ul {
   padding: inherit;
     display: flex;
@@ -115,4 +120,19 @@ justify-content: space-between;
 
 .representante-list_container li h3 {
   font-size: 16px;
+}
+
+.delegado-home_hero button {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 6vh;
+  width: 43vw;
+  border-radius: 2vw;
+  background: var(--green);
+  position: absolute;
+  font-size: 16px;
+  bottom: -2.5vh;
+  color: var(--text-dark);
+  border: 2px solid var(--gray-light);
 }

@@ -10,6 +10,7 @@
   position: relative;
   padding: 2vh 0;
   box-sizing: border-box;
+
  
 }
 
@@ -79,7 +80,9 @@
   border: 2px solid var(--gray-light);
 }
 
-
+.pagos-list_container{
+  margin: 0 0 15vh 0;
+}
 .pagos-list_container ul{
 display: flex;
 padding: inherit;

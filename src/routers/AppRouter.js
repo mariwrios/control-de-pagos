@@ -23,14 +23,14 @@ export const AppRouter = () => {
                         exact 
                         path="/login" 
                         component={Login}
-                        isAuthenticated={login}
+                        isAuthenticated={true}
                     />
 
                     <PrivateRoutes 
                         exact 
                         path="/" 
                         component={ Dashboard } 
-                        isAuthenticated={login}
+                        isAuthenticated={true}
                     />
 
                     <Redirect to="/" />   

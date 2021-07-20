@@ -1,7 +1,13 @@
 import React from 'react'
+import './profile.css'
 
-import './profile-delegado.css'
+
 const ProfileHeader = () => {
+  
+const handleNewPago = () =>{
+  console.log('quiero añadir un nuevo pago')
+}
+
   return (
     <div className='profile_container'>
       <div className='profile_header'>
@@ -23,9 +29,9 @@ const ProfileHeader = () => {
         <img src='./assets/delegado/telefono.svg' alt='icono de telefono'/>
         <h4>0424-2345675</h4>
       </span>
-      <button >
+      <button onClick={handleNewPago} >
         <img src='./assets/delegado/icon-more-dark.svg' alt='icono de nuevo registro'/>
-        Nuevo Registro
+        Añadir Pago
         </button>
     </div>
     </div>
