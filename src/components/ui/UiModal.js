@@ -1,28 +1,62 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Modal from 'react-modal';
 import DateTimePicker from 'react-datetime-picker';
 import './ui.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { closeModal } from '../../actions/modalAction';
-import {  useHistory, useLocation, useParams } from 'react-router-dom';
+import { useLocation} from 'react-router-dom';
+import { useForm } from '../../hooks/useForm';
 
 
 Modal.setAppElement('#root');
 
-export const  UiModal = ({history}) => {
-const {pathname} = useLocation()
+const initialPaymentForm ={
+  namep: 'mari@gmail.com',
+  casap:'123456',
+  referenciap:'',
+  montop:''
+}
 
+const initialRegisterForm ={
+  namer: '',
+  apellidor:'',
+  casar:'',
+  telefonor:''
+}
+
+export const  UiModal = () => {
+const {pathname} = useLocation()
 const {openModal} = useSelector(state => state.modal)
 const dispatch = useDispatch()
 
+const [valuePayment, handleInputChangePayment] = useForm(initialPaymentForm)
+
+const [valueRegister, handleInputChangeRegister] = useForm(initialRegisterForm)
+
+const {namep, casap, referenciap, montop} = valuePayment
+
+
+const {namer, apellidor, casar, telefonor} = valueRegister
+
+
 const startCloseModal = () => {
-  // TODO: cerrar el modal
   dispatch( closeModal() );
 }
     
 const handlePaymentSave = (e) => {
     e.preventDefault();
-    console.log('Se guardo un pago')
+   
+
+  if(pathname==='/perfil'){
+    console.log('Se registro un pago');
+    console.log(valuePayment)
+  }else if (pathname==='/inicio'){
+    console.log('Se registro una casa');
+    console.log(valueRegister)
+  }
+
+   
+  
 }
 
   return (
@@ -33,43 +67,106 @@ const handlePaymentSave = (e) => {
    
 
           >{
-            (pathname==='/perfil')&&  <div>
-            <h3>Añadir pago</h3>   
-            <form className='modal__form'> 
-                <div className='modal_container--input'>
-                  <input className='modal_input' placeholder='Name' type='text'/>
-                  <input className='modal_input' placeholder='Nro de Casa' type='text'/>
-                </div>
-                <div className='modal_container--input'>
-                  <input className='modal_input' placeholder='Nro de referencia' type='number'/>
-                  <input className='modal_input'  placeholder='Monto a pagar' type='number'/>
-                </div>
-                <DateTimePicker
-                      />
-                      <DateTimePicker
-                      />
-                      
-          
-                <input  type='file'/>
-                <button className='modal_button--save' onClick={handlePaymentSave}>
-                    Guardar
-                </button>
-            </form>
-        </div>
+              (pathname==='/perfil')
+                 &&  
+                  <div>
+                    <h3>Añadir pago</h3>   
+                    <form className='modal__form'> 
+                      <div className='modal_container--input'>
+                        <input 
+                          className='modal_input' 
+                          placeholder='Name' 
+                          type='text' 
+                          value={namep} 
+                          name='namep'
+                          onChange={handleInputChangePayment}
+                        />
+                        <input 
+                          className='modal_input' 
+                          placeholder='Nro de Casa' 
+                          type='text'
+                          type='text' 
+                          value={casap} 
+                          name='casap'
+                          onChange={handleInputChangePayment}
+                          />
+                      </div>
+                      <div className='modal_container--input'>
+                        <input 
+                          className='modal_input' 
+                          placeholder='Nro de referencia' 
+                          type='number'
+                          type='text' 
+                          value={referenciap} 
+                          name='referenciap'
+                          onChange={handleInputChangePayment}
+                          />
+                        <input 
+                          className='modal_input'  
+                          placeholder='Monto a pagar' 
+                          type='number'
+                          type='text' 
+                          value={montop} 
+                          name='montop'
+                          onChange={handleInputChangePayment}
+                          />
+                      </div>
+                      <DateTimePicker/>
+                      <DateTimePicker/>
+                      <input  type='file'/>
+                      <button className='modal_button--save' onClick={handlePaymentSave}>
+                          Guardar
+                      </button>
+                    </form>
+                  </div>
           }
          {
-            (pathname==='/inicio')&&  <div>
-            <h3>Añadir pago</h3>   
-            <form className='modal__form'> 
-                <div className='modal_container--input'>
-                  <input className='modal_input' placeholder='Name' type='text'/>
-                  <input className='modal_input' placeholder='Nro de Casa' type='text'/>
+              (pathname==='/inicio')
+                &&  
+                  <div>
+                      <h3>Añadir pago</h3>   
+                      <form className='modal__form'> 
+                          <div className='modal_container--input'>
+                            <input 
+                              className='modal_input' 
+                              placeholder='Name' 
+                              type='text'
+                              value={namer} 
+                              name='namer'
+                              onChange={handleInputChangeRegister}
+                              />
+                              
+                            <input 
+                              className='modal_input' 
+                              placeholder='Apellido' 
+                              type='text'
+                              value={apellidor} 
+                              name='apellidor'
+                              onChange={handleInputChangeRegister}
+                              />
+                                                
+                          </div>
+                          <div>
+                            <input 
+                              className='modal_input' 
+                              placeholder='Nro de Casa' 
+                              type='text'
+                              value={casar} 
+                              name='casar'
+                              onChange={handleInputChangeRegister}/>
+                            <input 
+                              className='modal_input' 
+                              placeholder='Telefono' 
+                              type='number'
+                              value={telefonor} 
+                              name='telefonor'
+                              onChange={handleInputChangeRegister}/>   
+                          </div>
+                          <button className='modal_button--save' onClick={handlePaymentSave}>
+                              Guardar
+                          </button>
+                      </form>
                 </div>
-                <button className='modal_button--save' onClick={handlePaymentSave}>
-                    Guardar
-                </button>
-            </form>
-        </div>
           }
            
    </Modal>

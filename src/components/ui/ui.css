@@ -72,18 +72,9 @@
 
 .modal_container--input{
   display: flex;
-  width: 80vw;
   justify-content: space-evenly;
 }
 
-.modal_container--input :nth-child(1){
-  width: 40vw;
-}
-
-
-.modal_container--input :nth-child(2){
-  width: 30vw;
-}
 
 .modal_input{
   height: 5vh;

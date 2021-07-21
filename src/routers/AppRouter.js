@@ -9,10 +9,10 @@ import { Login } from '../components/auth/Login';
 import Dashboard from './Dashboard';
 import { PublicRoutes } from './PublicRoutes';
 import { PrivateRoutes } from './PrivatesRoutes';
-import { useSelector } from 'react-redux';
+//import { useSelector } from 'react-redux';
 
 export const AppRouter = () => {
-    const {login} = useSelector(state => state.auth)
+   // const {login} = useSelector(state => state.auth)
 
     return (
         <Router>
