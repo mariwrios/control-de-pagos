@@ -6,8 +6,6 @@ export const types = {
   authStartStartTokenRenew: '[auth] Start token renew',
   authLogout: '[auth] Logout',
 
-
-
   payAddNew: '[pay] New note',
   payActive: '[pay] Set active note',
   payLoad: '[pay] Load pay',
@@ -15,4 +13,7 @@ export const types = {
   payFileUrl: '[pay] Updated image url',
   payDelete: '[pay] Delete note',
   payLogoutCleaning: '[pay] Logout Cleaning',
+
+  OpenModal: '[modal] Open modal',
+  CloseModal: '[modal] Close modal',
 }

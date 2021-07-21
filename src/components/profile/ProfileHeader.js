@@ -1,11 +1,15 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { openModal } from '../../actions/modalAction'
 import './profile.css'
 
 
 const ProfileHeader = () => {
+  const dispatch = useDispatch()
   
 const handleNewPago = () =>{
-  console.log('quiero añadir un nuevo pago')
+  console.log('quiero pagar')
+  dispatch(openModal())
 }
 
   return (

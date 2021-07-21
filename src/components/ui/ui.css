@@ -46,3 +46,99 @@
   color: var(--text-dark);
   text-decoration: none;
 }
+
+/*---- Modal---- */
+
+.modal {
+  background: var(--gray-light);
+  border-radius: 5px;
+  height: 50vh;
+  color: rgb(51, 51, 51);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  max-height: 620px;
+  max-width: 500px;
+  outline: none;
+  padding: 10px;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal_container--input{
+  display: flex;
+  width: 80vw;
+  justify-content: space-evenly;
+}
+
+.modal_container--input :nth-child(1){
+  width: 40vw;
+}
+
+
+.modal_container--input :nth-child(2){
+  width: 30vw;
+}
+
+.modal_input{
+  height: 5vh;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 2vh;
+  outline: none;
+  font-size: 18px;
+  min-height: 40px;
+ 
+ 
+  box-sizing: border-box;
+  color: #5c6971;
+}
+
+.modal_button--save {
+  height: 5vh;
+  width: 50vw;
+  min-height: 40px;
+  border-radius: 5px;
+  color: var(--gray-light);
+  font-size: 18px;
+  font-weight: bolder;
+  margin-top: 2vh;
+  border: none;
+  background-color: var(--blue-light);
+  cursor: pointer;
+  box-shadow: 0px 24px 48px -18px rgba(21, 70, 160, 0.5);
+}
+
+.ReactModalPortal > div{
+  opacity: 0;
+}
+
+.ReactModalPortal .ReactModal__Overlay {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transition: opacity .2s ease-in-out;
+  z-index: 999;
+}
+
+.modal-fondo {
+  background-color: rgba(0, 0, 0, 0.3);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: fixed;
+}
+
+.ReactModalPortal .ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close {
+  opacity: 0;
+}

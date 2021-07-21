@@ -1,12 +1,12 @@
 import React from 'react'
 import ProfileHeader from './ProfileHeader'
 import { PaymentsList } from '../payment/PaymentsList'
-import { PaymentModal } from '../payment/PaymentModal'
+import { UiModal } from '../ui/UiModal'
 
 export const Profile = () => {
   return (
     <div>
-      <PaymentModal/>
+      <UiModal/>
       <ProfileHeader />
       <PaymentsList/>
     </div>

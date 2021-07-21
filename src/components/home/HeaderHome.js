@@ -1,8 +1,12 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { openModal } from '../../actions/modalAction'
 
 export const HeaderHome = () => {
+  const dispatch = useDispatch()
 
   const handleNewPersonRegister = ()=>{
+    dispatch(openModal())
     console.log('Quiero registrar a una nueva persona')
   }
 
