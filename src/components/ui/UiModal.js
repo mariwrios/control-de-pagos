@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { closeModal } from '../../actions/modalAction';
 import { useLocation} from 'react-router-dom';
 import { useForm } from '../../hooks/useForm';
+import { addNewHouse } from '../../actions/houseAction';
 
 
 Modal.setAppElement('#root');
@@ -29,9 +30,9 @@ const {pathname} = useLocation()
 const {openModal} = useSelector(state => state.modal)
 const dispatch = useDispatch()
 
-const [valuePayment, handleInputChangePayment] = useForm(initialPaymentForm)
+const [valuePayment, handleInputChangePayment, resetp] = useForm(initialPaymentForm)
 
-const [valueRegister, handleInputChangeRegister] = useForm(initialRegisterForm)
+const [valueRegister, handleInputChangeRegister, resetr] = useForm(initialRegisterForm)
 
 const {namep, casap, referenciap, montop} = valuePayment
 
@@ -52,11 +53,13 @@ const handlePaymentSave = (e) => {
     console.log(valuePayment)
   }else if (pathname==='/inicio'){
     console.log('Se registro una casa');
+    dispatch(addNewHouse(Math.random(), valueRegister))
     console.log(valueRegister)
   }
 
-   
-  
+  dispatch( closeModal() );
+  resetr()
+
 }
 
   return (
@@ -84,7 +87,6 @@ const handlePaymentSave = (e) => {
                         <input 
                           className='modal_input' 
                           placeholder='Nro de Casa' 
-                          type='text'
                           type='text' 
                           value={casap} 
                           name='casap'
@@ -96,7 +98,6 @@ const handlePaymentSave = (e) => {
                           className='modal_input' 
                           placeholder='Nro de referencia' 
                           type='number'
-                          type='text' 
                           value={referenciap} 
                           name='referenciap'
                           onChange={handleInputChangePayment}
@@ -105,7 +106,6 @@ const handlePaymentSave = (e) => {
                           className='modal_input'  
                           placeholder='Monto a pagar' 
                           type='number'
-                          type='text' 
                           value={montop} 
                           name='montop'
                           onChange={handleInputChangePayment}
@@ -124,7 +124,7 @@ const handlePaymentSave = (e) => {
               (pathname==='/inicio')
                 &&  
                   <div>
-                      <h3>Añadir pago</h3>   
+                      <h3>Añadir Casa</h3>   
                       <form className='modal__form'> 
                           <div className='modal_container--input'>
                             <input 

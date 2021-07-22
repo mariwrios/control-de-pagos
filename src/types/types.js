@@ -16,4 +16,11 @@ export const types = {
 
   OpenModal: '[modal] Open modal',
   CloseModal: '[modal] Close modal',
+
+  houseAddNew: '[house] New house',
+  houseActive: '[house] Set active house',
+  houseLoad: '[house] Load house',
+  houseUpdated: '[house] Updated note',
+  houseDelete: '[house] Delete note',
+  houseLogoutCleaning: '[house] Logout Cleaning',
 }
